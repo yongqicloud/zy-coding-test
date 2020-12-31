@@ -10,10 +10,18 @@ function getHash(str){
     throw new Error('参数必须为字符串');
   }
   const hash = crypto.createHash('sha256');
-  const res  =  hash.update('要创建哈希摘要的数据');
+  const res = hash.update(str);
+  
   return res.digest('hex');
 }
+function getFiveLengthS(str){
+  if (!str || typeof str !== 'string') {
+    throw new Error('参数必须为字符串');
+  }
 
+  return str.slice(0, 5);
+}
 module.exports = {
-  getHash
+  getHash,
+  getFiveLengthS
 };
