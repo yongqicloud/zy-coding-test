@@ -7,10 +7,10 @@ const DEFAULT_HASH = '0';
 const boxMap = {};
 // 神秘数字数组
 const resultList = [];
-// 神秘数字最大值
-let password = 1;
 
 for (let index = 1; index <= 10; index ++) {
+  // 神秘数字最大值
+  let password = 1;
   // 上一个盒子的hash
   let preHash;
 
